@@ -22,7 +22,7 @@ export class ToDoListPage {
     };
 
     validarAll() {
-    cy.get(this.validarAll).should('exist');
+        cy.get(this.validarAll).should('exist');
     };  
 
     validarCompleted() {
@@ -34,6 +34,6 @@ export class ToDoListPage {
     };
 
     validarRemoveAll() {
-    cy.get(this.validarRemoveAll).should('exist');
+        cy.get(this.validarRemoveAll).should('exist');
     };
 };

@@ -9,8 +9,8 @@ describe("Actividad complementaria", () =>{
     
 
         cy.get('#user').type('ruxy');
-        //cy.get('#user').clear();
-        //cy.get('#user').type('Ruxy' +numeroRandom);
+        cy.get('#user').clear();
+        cy.get('#user').type('Ruxy' + numeroRandom);
         cy.get('#pass').type('123456.',{log:false});
         cy.get("[value='Male']").check({force:true});
         cy.get('#day').select('2');

@@ -5,9 +5,9 @@ describe('API TESTING', () => {
 
     it("Consulta basica utilizando request", () => {
         cy.request('http://localhost:3000/posts/').then(respuesta => {
-            cy.log(respuesta);
-            expect(respuesta.body[0].id).to.be.equal(1);
-            expect(respuesta.status).to.be.equal(200);
+        cy.log(respuesta);
+        expect(respuesta.body[0].id).to.be.equal(1);
+         expect(respuesta.status).to.be.equal(200);
         })
     })
 
