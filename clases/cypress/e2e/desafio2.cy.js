@@ -20,7 +20,6 @@ describe('Desafio2', () => {
     });
 
     it("Deberia ingresar al sitema y agrega cinco tarea", () => {
-        cy.log('test 1')
         cy.get('#task').type(`${datosDesafio2.tareas.tarea1} {enter}`)
         cy.get('#task').type(`${datosDesafio2.tareas.tarea2} {enter}`)
         cy.get('#task').type(`${datosDesafio2.tareas.tarea3} {enter}`)
@@ -29,7 +28,6 @@ describe('Desafio2', () => {
     });
 
     it("Deberia verificar que existan los botones, All, Completed, Active y Remove all", () => {
-        cy.log('test 2')
         cy.xpath('//button[@id="all"]').should('exist')
         cy.get('#completed').should('exist')
         cy.xpath('//button[text()="Active"]').should('exist')
@@ -37,7 +35,6 @@ describe('Desafio2', () => {
     });
     
     it("Agrega 2 tareas, completarlas y eliminar la segunda tarea completada", () => {
-        cy.log('test 3')
         cy.get('#task').type(`${datosDesafio2.tareas.tarea1} {enter}`)
         cy.get('#task').type(`${datosDesafio2.tareas.tarea2} {enter}`)
         cy.contains('p','Tarea 1').click();
@@ -46,7 +43,6 @@ describe('Desafio2', () => {
     });
 
     it("Agregar 2 tareas y elimina la primera", () => {
-        cy.log('test 4')
         cy.get('#task').type(`${datosDesafio2.tareas.tarea1} {enter}`)
         cy.get('#task').type(`${datosDesafio2.tareas.tarea2} {enter}`)
         cy.contains('p','Tarea 1').parent().find('button').click();
