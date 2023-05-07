@@ -1,0 +1,11 @@
+{
+    "productos": {
+        "nombre": "White Pants"
+    },
+
+    "checkout":{
+        "nombre": "pushingit",
+        "apellido": "apellido",
+        "tarjeta": "12346"
+    }
+}

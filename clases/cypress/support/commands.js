@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('logIn', (usuario, contraseña) => {
+    cy.request({
+        url: 'https://pushing-it.onrender.com/api/login',
+        method: "POST",
+        body: {
+            "username": "usuario",
+            "password": "contraseña"
+        },
+    }).then(respuesta => {
+        window.localStorage.setItem('token', respuesta.body.token)
+        window.localStorage.setItem('user', respuesta.body.user.username)
+    });
+});
