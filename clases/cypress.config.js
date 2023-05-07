@@ -9,5 +9,8 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     'baseUrl': 'https://pushing-front.vercel.app/',
   },
-  
+  env:{
+    usuario: "pushingit",
+    contraseña: "123456!"
+  }  
 });
